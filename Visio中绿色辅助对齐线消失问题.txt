@@ -1,0 +1,42 @@
+1. 打开注册表，检查这两个位置：
+
+HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Visio\Application
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Office\16.0\Visio\Application
+
+看有没有这个值：
+
+livemousedynamics
+
+如果有，并且是：
+
+0
+
+把它改成：
+
+1
+
+或者直接删除这个值。
+
+2. 手动强制写入 Live Dynamics
+
+如果上面两个位置都没有，可以手动加一个普通配置项。
+
+注册表进入：
+
+HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Visio\Application
+
+如果没有 Application，就新建这个项。
+
+然后新建：
+
+DWORD(32 位)值
+
+名称：
+
+livemousedynamics
+
+数值：
+
+1
+
+然后重启电脑，再打开 Visio 测试。
