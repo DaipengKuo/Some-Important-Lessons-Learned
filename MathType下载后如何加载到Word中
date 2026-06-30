@@ -1,0 +1,2 @@
+把 MathType 的 Word 模板复制到Word的安装目录中有时Word不会自动加载，原因是Word有自己的启动目录， 需要把它放在 Word 用户启动目录。
+如：C:\Users\10252\AppData\Roaming\Microsoft\Word\STARTUP
